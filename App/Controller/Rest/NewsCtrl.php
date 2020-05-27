@@ -66,7 +66,7 @@ class NewsCtrl extends RestCtrl {
     public function updateNews() {
         $id = $this->req->post('id', '');
         $fileName = $this->req->post('image', '');
-
+        
         if (isset($fileName)) {
             mkdir(BASE_DIR . '/Docroot/upload/news/' . DateTimeEx::create()->toYear());
             mkdir(BASE_DIR . '/Docroot/upload/news/' . DateTimeEx::create()->toYear() . '/' . DateTimeEx::create()->toMonth());
