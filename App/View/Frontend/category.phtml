@@ -1,0 +1,34 @@
+<?php
+$this->addJs(array(
+    $this->themeUrl() . '/js/categoryNews.js'
+));
+?>
+<script>
+    var idCategory = <?php echo $data['id'];
+?>
+</script>
+<angular ng-controller="categoryCtrl">
+    <div id="content">
+        <div id="con-right">
+            <div id="show-category">
+                <div class="show-newslike">Tin tức </div>
+                <ul>
+                    <li class="ng-scope" ng-repeat="x in listCategory">
+                        <a href="<?php echo url('/detail/') ?>{{x.id}}" class="ng-binding ng-cloak">{{x.title}}</a>
+                        <span class="imgFloat-tttt imgCategory">
+                            <a href="<?php echo url('/detail/') ?>{{x.id}}" title="">
+                                <img style="margin:2px 0px" ng-src="<?php echo url() . '/'; ?>{{x.iurl}}">
+                            </a>  
+                        </span>
+                        <span class="news-title ng-cloak">
+                           {{x.intro.substr(0, 150)}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</div>
+</div>
+</angular>
+

@@ -1,0 +1,433 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    border-top: 5px solid #81b300;
+    background-color: #fff;
+    position: relative !important;
+    height: auto !important;
+}
+.header{
+    float: left;
+    width: 100%;
+    height: auto;
+}
+.head{
+    width: 100%;
+    height: 135px;
+}
+.head img{
+    position: absolute;
+    float: left;
+    margin-top: 23px;
+    margin-left: 30px;
+}
+.head #h-right{
+    position: relative;
+    float: right;
+    width: 300px;
+    height: 135px;
+    margin-right: 30px;
+}
+.head #h-right-top{
+    top:-10px;
+    position: inherit;
+    height: 50px;
+    width:252px;
+    background-color: #81b300;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.head #h-right-top li{
+    background-color: #1f1f1f;
+    float: left;
+    list-style: none;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-top: 6px;
+}
+.head #h-right-top li:hover{
+    background-color: #00acee;
+}
+.head #h-right-bot ul{
+    margin-top: 20px;
+}
+.head #h-right-bot li{
+    float: left;
+    list-style: none;
+    margin: 1px;
+    font-size: 14px;
+    font-family: "Times New Roman";
+}
+.head #h-right-bot li a{
+    color:#81b300;
+}
+.menu{
+    position: relative;
+    width: 100%;
+    height: 65px;
+    background-color: #81b300;
+}
+.menu #menu{
+    position: absolute;
+    float: left;
+    width: 720px;
+    height: 100%;
+}
+.menu #menu ul{
+    margin-left: 18px;
+}
+.menu #menu li{
+    font-size: 18px;
+    float: left;
+    list-style: none;
+    padding: 20px;
+}
+.menu #menu li:hover{
+    background-color: #5d8100;
+}
+.active{
+    background-color: #5d8100;
+}
+.menu #menu li a{
+    color: white;
+    text-decoration: none;
+}
+.menu #search{
+    right: 0px;
+    position: absolute;
+    width: 450px;
+    height: 100%;
+}
+.menu #search .for-search{
+    left: 90px;
+    position: absolute;
+    top: 16px;
+}
+.menu #search .for-search .btnSubmit {
+    float: right;
+    margin-right: -70px;
+    margin-top: -34px;
+}
+.body{
+    top:200px;
+    width: 100%;
+    height: auto;
+    /*background-color: red;*/
+}
+div#slide{
+    float: left;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+#slide #borde{
+    padding: 20px;
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+}
+#center{
+    width: 100%;
+    height: 350px;
+    /*  background-color: #3e8f3e;*/
+}
+#center ul{
+    float: left;
+    padding-left: 70px;
+    padding-right: 80px;
+    margin-bottom: 30px;
+}
+#center li{
+    margin-top: 20px;
+    max-width: 245px;
+    height: 300px;
+    list-style: none;
+    float: left;
+    margin-left: 10px;
+    border: 1px solid #e2e2e2;
+}
+#center #c-image{
+    text-align: center;
+    padding-top: 40px;
+    width: 243px;
+    height: 130px;
+    background-color: white;
+}
+#center #c-image i{
+    font-size: 70px;
+}
+#center #c-content{
+    width: 243px;
+    height: 167px;
+}
+#center #c-content h3{
+    color: #c7dba3;
+}
+#center #c-content a{
+    text-decoration: none;
+}
+#center #c-content p{
+    margin-left: 10px;
+}
+div#show-news{
+    margin-top: -35px;
+    width: 100%;
+    height: 325px;
+    /*  background-color: #3e8f3e;*/
+}
+div#show-news ul{
+    float: left;
+    padding-left: 70px;
+    padding-right: 80px;
+    margin-bottom: 30px;
+}
+div#show-news li{
+    position: relative;
+    margin-top: 20px;
+    max-width: 245px;
+    height: 300px;
+    list-style: none;
+    float: left;
+    margin-left: 10px;
+    border: 1px solid #e2e2e2;
+}
+div#show-news #c-image{
+    text-align: center;
+    padding-top: 40px;
+    width: 243px;
+    height: 130px;
+    background-color: white;
+}
+div#show-news #c-image i{
+    font-size: 70px;
+}
+div#show-news #c-image img{
+    margin-top: -35px;
+    width: 240px;
+    height: 120px;
+}
+div#show-news#c-content{
+    width: 243px;
+    height: 167px;
+}
+div#show-news #c-content h3{
+    color: #c7dba3;
+}
+div#show-news #c-content a{
+    text-decoration: none;
+}
+div#show-news #c-content p{
+    margin-left: 10px;
+}
+div.footer{
+    position: absolute;
+    bottom: -320px;
+    width: 100%;
+    height: 300px;
+}
+div.footer #f-top{
+    width: 100%;
+    height: 250px;
+    background-color: #3b3b3b;
+}
+div.footer #f-top ul{
+    padding-left: 70px;
+    padding-right: 80px;
+    margin-bottom: 30px;
+}
+div.footer  #f-top li{
+    margin-top: 0px;
+    max-width: 245px;
+    height: 250px;
+    list-style: none;
+    float: left;
+    margin-left: 10px;
+}
+div.footer #f-top #c-image{
+    padding-top:18px;
+    width: 243px;
+    height: 50px;
+}
+div.footer #f-top #c-image i{
+    font-size: 70px;
+}
+div.footer #f-top #c-image img{
+    margin-top: -35px;
+    width: 240px;
+    height: 120px;
+}
+div.footer #f-top #c-content{
+    width: 243px;
+    height: 167px;
+}
+div.footer #f-top #c-content h3{
+    color: #c7dba3;
+}
+div.footer #f-top #c-content a{
+    text-decoration: none;
+}
+div.footer #f-top #c-content p{
+    margin-left: 10px;
+}
+div.footer #f-bot{
+    padding-top: 15px;
+    width: 100%;
+    height: 50px;
+    background-color: #2e2e2e;
+}
+hr{
+    margin-top: 5px !important;
+}
+/*----------------------------------------------------------------*/
+div#content{
+    width: 100%;
+    float: left;
+}
+div#content #con-right{
+    float: left;
+    width: 810px;
+    height: 100%;
+}
+div#con-left {
+    margin-left: 20px;
+    border: 3px solid #81b300;
+    margin-top: 16px;
+    width: 325px;
+    float: left;
+}
+.show-newslike {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    width: auto;
+    height: 35px;
+    background-color: #81b300;
+}
+div#con-left ul{
+    margin-bottom: -3px;
+    list-style: none;
+}
+div#con-left li{
+    padding: 5px;
+    height: 90px;
+    border-bottom: 1px solid #81b300;
+}
+div#con-left li img{
+    width: 120px;
+    height: 70px;
+}
+div#con-left li #link-likes{
+    text-decoration: none;
+}
+.box4T-bg .imgNews-home {
+    width: 90px;
+    height: 70px;
+}
+.news-title {
+    display: block;
+    font-weight: 700;
+    color: #333;
+    text-align: justify; 
+    margin: 0;
+}
+.imgFloat-tttt {
+    float: left;
+    margin-right: 10px;
+    display: block;
+    position: relative;
+}
+.box4T-bg .news-title a {
+    font-size: 13px;
+}
+.news-title a {
+    font-size: 13px;
+    color: black;
+    text-decoration: none !important;
+}
+
+.baiviet-tags h2, h3, h4 {
+    margin: 0;
+    display: inline;
+}
+.baiviet-sukien a {
+    color: #666;
+    font-size: 16px;
+    text-decoration: underline;
+}
+p img{
+    margin-left: 65px;
+}
+.title_box {
+    padding: 6px;
+    float: left;
+    background-color: #81b300;
+    width: 130px;
+    height: 33px;
+}
+.title_box a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+.title_box #link-cate{
+    text-decoration: none;
+}
+/*----------------------------------------------------*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+/*----------------------------------------------------*/
+div#show-category {
+    margin-left: 10px;
+    width: 650px;
+    margin-top: 16px;
+    float: left;
+}
+div#show-category ul {
+    padding: 10px;
+    margin-bottom: -3px;
+    list-style: none;
+}
+div#show-category li{
+    height: 100px;
+    border-bottom: 1px solid #81b300;
+}
+div#show-category li a{
+    text-decoration: none;
+}
+span.imgCategory{
+    width: 138px;
+    height: 70px;
+}
+span.imgCategory img{
+    margin-top: 5px !important;
+    width: 138px;
+    height: 85px;
+}
+/*----------------------------------------------------*/
+@media only screen and (max-width: 991px){
+    #center{
+        width: 100%;
+        height: 665px;
+    }
+    div.footer {
+        position: absolute;
+        bottom: -457px;
+        width: 100%;
+        height: 300px;
+        background-color: #2aabd2;
+    }
+    div#show-news {
+        margin-top: -35px;
+        margin-bottom: 100px;
+        width: 100%;
+        height: 662px;
+    }
+}

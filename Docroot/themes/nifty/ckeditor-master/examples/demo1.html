@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="../ckeditor/ckeditor.js"></script>
+        <script src="../ng-ckeditor.js"></script>
+        <link rel="stylesheet" href="../ng-ckeditor.css">
+    </head>
+<body ng-app="main">
+    <h1>Simple editor</h1>
+
+    <div ng-controller="DemoCtrl">
+
+        <form name="frm">
+
+            <div ng-cloak ng-hide="isReady" class="highlight">
+                Initialising ...
+            </div>
+
+            <div ng-cloak ng-show="isReady">
+                <textarea ckeditor="editorOptions" name="editor" ng-model="test"></textarea>
+            </div>
+
+            {{test}}
+            <button ng-click="save()">Save</button>
+
+        </form>
+
+        <script>
+        var app = angular.module('main', ['ngCkeditor']).
+        controller('DemoCtrl', function($scope, $http) {
+            $scope.editorOptions = {
+                language: 'ru'
+               // uiColor: '#000000'
+            };
+            $scope.$on("ckeditor.ready", function( event ) {
+                $scope.isReady = true;
+            });
+            $scope.test = '<p>Hello</p>\n';
+            $scope.save = function() {
+				console.log($scope.test);
+            }
+			
+        })
+        </script>
+    </div>
+
+
+    </body>
+</html>
