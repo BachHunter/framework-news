@@ -26,7 +26,7 @@ $this->addJs(array(
         <div id="con-left">
             <div class="show-newslike">Tin tức xem nhiều</div>
             <ul>
-                <li ng-repeat="x in listNewsLike">
+                <li ng-repeat="x in listNews">
                     <span class="imgFloat-tttt imgNews-home">
                         <a href="<?php echo url('/detail/') ?>{{x.id}}" title="">
                             <img style="margin:2px 0px" ng-src="<?php echo url() . '/'; ?>{{x.iurl}}" width="90" height="70" alt="" class="ng-cloak">

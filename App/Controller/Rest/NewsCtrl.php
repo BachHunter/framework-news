@@ -96,5 +96,7 @@ class NewsCtrl extends RestCtrl {
         $list = $this->newMapper->getNewsHome();
         $this->resp->setBody(Json::encode($list));
     }
+    
+    
 
 }

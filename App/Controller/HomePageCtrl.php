@@ -14,10 +14,10 @@ class HomePageCtrl extends CoreCtrl {
                 ->render('Frontend/index.phtml');
     }
 
-//    function detail($id) {
-//        $data['id'] = $id;
-//        $this->index->render('/Frontend/detail.phtml', $data);
-//    }
+    function detail($id) {
+        $data['id'] = $id;
+        $this->frontendLayout->render('/Frontend/detail.phtml', $data);
+    }
 //    function categrory($id){
 //        $data['id'] = $id;
 //        $this->index->render('/Frontend/category.phtml', $data);

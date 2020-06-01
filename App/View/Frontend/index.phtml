@@ -51,15 +51,13 @@ $this->addJs(array(
             <a href="#" id="link-cate">Tin xem nhiều</a>
         </div>
         <ul>
-            <li ng-repeat="x in listNewsLike">
+            <li ng-repeat="x in listNews">
                 <div id="c-image"  ng-click="detail(x.id)">
                     <a href="<?php echo url('/detail/') ?>{{x.id}}"><img ng-src="<?php echo url() . '/'; ?>{{x.iurl}}" alt="" class="ng-cloak"></a>
                 </div>
                 <div id="c-content">
                     <a href="<?php echo url('/detail/') ?>{{x.id}}" ng-click="detail(x.id)" class="ng-cloak">{{x.title}}</a>  
-                    <p class="ng-cloak">
-                        {{x.intro.substr(0, 150)}}
-                    </p>
+                    
                     <a href="<?php echo url('/detail/') ?>{{x.id}}" style="float: right; position: absolute;bottom: 0px;right: 0px;" ng-click="detail(x.id)">View Detail>></a>
                 </div>
             </li> 
