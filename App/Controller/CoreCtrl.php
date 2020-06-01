@@ -22,6 +22,8 @@ abstract class CoreCtrl extends \Lib\Controller {
 
     /** @var ContentOnlyLayout */
     protected $contentOnlyLayout;
+    
+    protected $frontendLayout;
 
     /** @var \Lib\Setting */
     protected $setting;
@@ -51,6 +53,9 @@ abstract class CoreCtrl extends \Lib\Controller {
 
         $this->contentOnlyLayout = new ContentOnlyLayout($this->context);
         $this->contentOnlyLayout->setTemplatesDirectory(dirname(__DIR__) . '/View');
+        
+        $this->frontendLayout = new \App\View\Layout\FrontendLayout($this->context);
+        $this->frontendLayout->setTemplatesDirectory(dirname(__DIR__) . '/View');
     }
     
     protected function user() {

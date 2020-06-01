@@ -59,8 +59,8 @@ class NewsMapper extends Mapper {
     // lấy 4 dữ liệu tin xem nhiều nhất
     public function getNewsLike() {
         $list = $this->makeInstance()
-                ->select('c.name,n.*', FALSE)
-                ->innerJoin('catenews c ON c.id=n.cateId', FALSE)
+                ->select('cn.name,n.*', FALSE)
+                ->innerJoin('category_news cn ON cn.id=n.cateId', FALSE)
                 ->limit(4)
                 ->orderBy('n.likes DESC')
                 ->getAll();
@@ -70,8 +70,8 @@ class NewsMapper extends Mapper {
     // lấy chi tiết sản phẩm
     public function getDetail($id) {
         $detail = $this->filterID($id)
-                ->select('c.name, n.*', FALSE)
-                ->innerJoin('catenews c ON c.id = n.cateId')
+                ->select('cn.name, n.*', FALSE)
+                ->innerJoin('category_news cn ON cn.id = n.cateId')
                 ->getEntity();
         return $detail;
     }
@@ -79,11 +79,11 @@ class NewsMapper extends Mapper {
     // lấy danh sách tin tức theo loại
     public function getListCategory($id) {
         $list = $this->makeInstance()
-                ->select('c.name,n.*', FALSE)
-                ->innerJoin('catenews c ON c.id=n.cateId', FALSE)
+                ->select('cn.name,n.*', FALSE)
+                ->innerJoin('category_news cn ON cn.id=n.cateId', FALSE)
                 ->where('n.cateId=?', __FUNCTION__)->setParam($id, __FUNCTION__)
                 ->limit(4)
-                ->orderBy('n.id DESC')
+                ->orderBy('cn.id DESC')
                 ->getAll();
         return $list;
     }

@@ -6,7 +6,16 @@ use Lib\Layout;
 
 class FrontendLayout extends Layout {
 
-    protected $category;
+    protected $title = 'Cores';
+    protected $brand;
+    
+    public function themeUrl() {
+        return url('/themes/newstheme');
+    }
+
+    public function themeURLAdmin() {
+        return url('/themes/nifty');
+    }
 
     protected function renderLayout($content) {
         ?>
@@ -48,12 +57,12 @@ class FrontendLayout extends Layout {
                             <div class="menu">
                                 <div id="menu">
                                     <ul>
-                                        <li ng-class="{'active': activeMenuID ==''}" ng-click="change('');"><a href="">Home</a></li>
+                                        <li ng-class="{'active': activeMenuID == ''}" ng-click="change('');"><a href="">Home</a></li>
                                         <li ng-repeat="x in listCategory" ng-class="{'active': activeMenuID === x.id}" ng-click="change(x.id);"><a href="" class="ng-cloak" >{{x.name}}</a></li>
                                     </ul>
                                 </div>
                                 <div id="search">
-                                    <form action="<?php echo url();?>/search" class="form-group for-search" >
+                                    <form action="<?php echo url(); ?>/search" class="form-group for-search" >
                                         <input type="text" class="form-control txtSearch" placeholder="Enter Search" name="txtSearch">
                                         <button type="submit" class="btn btn-default btnSubmit">Search</button>
                                     </form>
@@ -62,7 +71,7 @@ class FrontendLayout extends Layout {
                         </div>
                         <div class="body">
                             <!----------Nội dung hiển thị------------>
-                            <?php echo $content; ?>
+        <?php echo $content; ?>
                             <!----------Kết thúc nội dung hiển thị------------>
                         </div>
                         <div class="footer">
@@ -147,14 +156,6 @@ class FrontendLayout extends Layout {
             </body>
         </html>
         <?php
-    }
-
-    public function themeUrl() {
-        return url('/themes/newstheme');
-    }
-
-    public function themeURLAdmin() {
-        return url('/themes/nifty');
     }
 
 }
