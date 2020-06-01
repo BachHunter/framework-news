@@ -20,10 +20,10 @@ class HomePageCtrl extends CoreCtrl {
     }
 //    function categrory($id){
 //        $data['id'] = $id;
-//        $this->index->render('/Frontend/category.phtml', $data);
+//        $this->frontendLayout->render('/Frontend/category.phtml', $data);
 //    }
-//    function getSearch(){
-//        $data['txtSearch'] = $this->req->get('txtSearch');
-//        $this->index->render('/Frontend/search.phtml', $data);
-//    }
+    function getSearch(){
+        $data['txtSearch'] = $this->req->get('txtSearch');
+        $this->frontendLayout->render('/Frontend/search.phtml', $data);
+    }
 }

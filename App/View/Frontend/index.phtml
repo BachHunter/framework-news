@@ -4,7 +4,7 @@ $this->addJs(array(
 ));
 ?>
 <angular ng-controller="homeCtrl">
-    <!--                        ------------------>
+                            <!-------------------->
     <div id="slide">
         <div id="borde">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -51,7 +51,7 @@ $this->addJs(array(
             <a href="#" id="link-cate">Tin xem nhiều</a>
         </div>
         <ul>
-            <li ng-repeat="x in listNews">
+            <li ng-repeat="x in listNewsLike">
                 <div id="c-image"  ng-click="detail(x.id)">
                     <a href="<?php echo url('/detail/') ?>{{x.id}}"><img ng-src="<?php echo url() . '/'; ?>{{x.iurl}}" alt="" class="ng-cloak"></a>
                 </div>
