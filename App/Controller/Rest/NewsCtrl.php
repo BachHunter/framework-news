@@ -92,10 +92,10 @@ class NewsCtrl extends RestCtrl {
     }
 
     // lấy limit 4 dữ liệu ngoài view
-    public function getNewsHome() {
-        $list = $this->newMapper->getNewsHome();
-        $this->resp->setBody(Json::encode($list));
-    }
+//    public function getNewsHome() {
+//        $list = $this->newMapper->getNewsHome();
+//        $this->resp->setBody(Json::encode($list));
+//    }
     
     
 

@@ -4,31 +4,8 @@ $this->addJs(array(
 ));
 ?>
 <angular ng-controller="homeCtrl">
-                            <!-------------------->
-    <div id="slide">
-        <div id="borde">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="<?php echo url() . '/upload/slide/la.jpg' ?>" alt="Los Angeles">
-                    </div>
+    <!-------------------->
 
-                    <div class="item">
-                        <img src="<?php echo url() . '/upload/slide/ny.jpg' ?>" alt="Chicago">
-                    </div>
-
-                    <div class="item">
-                        <img src="<?php echo url() . '/upload/slide/chicago.jpg' ?>" alt="New York">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="show-news">
         <div class="title_box">
             <a href="#" id="link-cate">Tin mới nhất</a>
@@ -40,8 +17,6 @@ $this->addJs(array(
                 </div>
                 <div id="c-content">
                     <a href="<?php echo url('/detail/') ?>{{x.id}}" ng-click="detail(x.id)" class="ng-cloak">{{x.title}}</a>  
-                    
-                    <a href="<?php echo url('/detail/') ?>{{x.id}}" style="float: right; position: absolute;bottom: 0px;right: 0px;" ng-click="detail(x.id)">View Detail>></a>
                 </div>
             </li>  
         </ul>
@@ -57,8 +32,6 @@ $this->addJs(array(
                 </div>
                 <div id="c-content">
                     <a href="<?php echo url('/detail/') ?>{{x.id}}" ng-click="detail(x.id)" class="ng-cloak">{{x.title}}</a>  
-                    
-                    <a href="<?php echo url('/detail/') ?>{{x.id}}" style="float: right; position: absolute;bottom: 0px;right: 0px;" ng-click="detail(x.id)">View Detail>></a>
                 </div>
             </li> 
         </ul>
