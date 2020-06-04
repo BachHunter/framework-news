@@ -47,7 +47,7 @@ class FrontendLayout extends Layout {
                                     <div id="h-right-bot">
                                         <ul>
                                             <li><a href="#">Sign Up</a> |</li>
-                                            <li><a href="#">Login</a> |</li>
+                                            <li><a href="http://localhost/framework-news/account/login">Login</a> |</li>
                                             <li><a href="#">RSS Feeds</a> |</li>
                                             <li><a href="#">Archived News</a></li>
                                         </ul>
@@ -58,7 +58,7 @@ class FrontendLayout extends Layout {
                                 <div id="menu">
                                     <ul>
                                         <li ng-class="{'active': activeMenuID == ''}" ng-click="change('');"><a href="">Home</a></li>
-                                        <li ng-repeat="x in listCategory" ng-class="{'active': activeMenuID === x.id}" ng-click="change(x.id);"><a href="" class="ng-cloak" >{{x.name}}</a></li>
+                                        <li ng-repeat="x in categoryNews" ng-class="{'active': activeMenuID === x.id}" ng-click="change(x.id);"><a href="" class="ng-cloak" >{{x.name}}</a></li>
                                     </ul>
                                 </div>
                                 <div id="search">

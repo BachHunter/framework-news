@@ -16,7 +16,7 @@ $("div#notify").hide();
 
 RED.ngApp.controller('cateNewsCtrl', function ($scope, $apply, $timeout, $http) {
     $scope.ajax = {};
-    $scope.categoryNews = [];
+    $scope.categoryNews;
     $scope.checked = {};
     $scope.modalEdit;
     $scope.editing;

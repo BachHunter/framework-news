@@ -42,7 +42,7 @@ class HomePageCtrl extends RestCtrl {
     // lấy dữ liệu của loại tin khi click
     public function getNewsCategory(){
         $id = $this->req->get('id');
-        $selec = $this->homePageMapper->getListCategory($id);
+        $selec = $this->homePageMapper->getCategory($id);
         $this->resp->setBody(Json::encode($selec));
     }
     public function getSearch(){
@@ -50,5 +50,6 @@ class HomePageCtrl extends RestCtrl {
         $selec = $this->homePageMapper->getListSearch($txtSearch);
         $this->resp->setBody(Json::encode($selec));
     }
+    
 
 }

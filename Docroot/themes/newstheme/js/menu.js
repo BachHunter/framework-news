@@ -1,20 +1,20 @@
 var appHome = angular.module('homeApp', ['ngSanitize']);
 appHome.controller('menuCtrl', function ($scope, $window) {
     $scope.sta = {};
-    $scope.listCategory;
+    $scope.categoryNews;
     $scope.activeMenuID = $window.localStorage.getItem('activeMenu') ? $window.localStorage.getItem('activeMenu') : '';
 
-    $scope.loadCategory = function () {
+    $scope.getCategory = function () {
         $.ajax({
-            url: CONFIG.siteUrl + '/rest/cate-news/list',
+            url: CONFIG.siteUrl + '/rest/cate-news',
             dataType: 'json'
         }).done(function (resp) {
             $scope.$apply(function () {
-                $scope.listCategory = resp;
+                $scope.categoryNews = resp;
             });
         });
     };
-    $scope.loadCategory();
+    $scope.getCategory();
 
     $scope.change = function (id) {
         $window.localStorage.setItem('activeMenu', id);

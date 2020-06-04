@@ -77,7 +77,7 @@ class NewsMapper extends Mapper {
     }
 
     // lấy danh sách tin tức theo loại
-    public function getListCategory($id) {
+    public function getCategory($id) {
         $list = $this->makeInstance()
                 ->select('cn.name,n.*', FALSE)
                 ->innerJoin('category_news cn ON cn.id=n.cateId', FALSE)
